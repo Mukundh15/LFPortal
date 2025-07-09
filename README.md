@@ -37,11 +37,12 @@ Follow these 4 steps to set up and run LFPortal locally:
 
 ### 🔁 Step 1: Clone the Repository
 
-```bash
-git clone https://github.com/your-username/LFPortal.git
+git clone https://github.com/Mukundh15/LFPortal.git
 cd LFPortal
 
-### 🔁 Step 2:
+---
+
+### 🔁 Step 2: 
 
 cd backend
 npm install
@@ -56,11 +57,21 @@ CLOUD_NAME=your_cloudinary_cloud_name
 CLOUD_API_KEY=your_cloudinary_api_key
 CLOUD_API_SECRET=your_cloudinary_api_secret
 
+---
 
 ### 🔁 Step 3:
 
 cd ../frontend
 npm install
 
+---
+
 ### 🔁 Step 4:
 run the both frontend and backend in each terminal
+Terminal-1:
+cd backend
+npm start
+
+Terminal-2:
+cd frontend
+npm run dev
