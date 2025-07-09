@@ -1,0 +1,12 @@
+.navbar-toggler {
+    border: 1px solid black;
+}
+.navbar-toggler-icon {
+  background-color: black;
+}
+.footer{
+  background-color: rgb(229, 229, 225);
+}
+.navbar{
+  background-color:rgb(237, 237, 234);
+}
