@@ -24,7 +24,7 @@ function CardsInfo() {
       });
     }
     useEffect(() => {
-        axios.get("http://localhost:8080/LFPortal/Profile", { withCredentials: true })
+        axios.get(`${BASE_URL}/LFPortal/Profile`, { withCredentials: true })
             .then(res => {
                 setuserdata({Email:res.data.user.email,id:res.data.user.id});
             })
