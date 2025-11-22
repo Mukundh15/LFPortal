@@ -34,12 +34,21 @@ function isAuthenticated(req, res, next) {
     }
 }
 app.set("trust proxy", 1);
+const allowedOrigins=[
+  "https://lfportal.netlify.app",
+  "http://localhost:5173"
+];
+
 app.use(cors({
-    origin: [
-        process.env.FRONTEND_URL,
-        "http://localhost:5173"
-    ],
-    credentials: true
+  origin: function (origin, callback) {
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }else{
+      return callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
 
 app.use(session({
