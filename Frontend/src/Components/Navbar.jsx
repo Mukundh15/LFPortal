@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState,useEffect } from "react";
+import { BASE_URL } from "../config";
 function Navbar() {
   const [user,setuser]=useState("");
   const [login,setlogin]=useState(false);
   useEffect(()=>{
-    axios.get("http://localhost:8080/LFPortal/Profile",{withCredentials: true})
+    axios.get(`${BASE_URL}/LFPortal/Profile`,{withCredentials: true})
     .then(res=>{
       setuser(res.data.user.name);
       setlogin(true);
@@ -18,7 +19,7 @@ function Navbar() {
 
   const Logout=(e)=>{
     e.preventDefault();
-    axios.get("http://localhost:8080/LFPortal/Logout",{withCredentials: true})
+    axios.get(`${BASE_URL}/LFPortal/Logout`,{withCredentials: true})
     .then(res=>{
       setlogin(false);
       setuser("");

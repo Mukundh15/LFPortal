@@ -2,7 +2,7 @@ import { TextField, Button, Alert } from "@mui/material";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { BASE_URL } from "../config";
 function Support() {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({ name: '', email: '' });
@@ -10,7 +10,7 @@ function Support() {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        axios.get("http://localhost:8080/LFPortal/Profile", { withCredentials: true })
+        axios.get(`${BASE_URL}/LFPortal/Profile`, { withCredentials: true })
             .then(res => {
                 setUserData({
                     name: res.data.user.name,
@@ -32,7 +32,7 @@ function Support() {
             Description: e.target.description.value
         };
 
-        axios.post("http://localhost:8080/LFPortal/Support", data, { withCredentials: true })
+        axios.post(`${BASE_URL}/LFPortal/Support`, data, { withCredentials: true })
             .then(res => {
                 if (res.data.success) {
                     setMessage(res.data.message);

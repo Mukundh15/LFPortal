@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
+import { BASE_URL } from "../config";
 function CardsInfo() {
     const [cardDetails, setCardDetails] = useState({});
     const [error, setError] = useState('');
@@ -12,7 +13,7 @@ function CardsInfo() {
     const navigate=useNavigate();
     const [userdata,setuserdata]=useState({});
     let handleDelete=()=>{
-      axios.delete(`http://localhost:8080/LFPortal?id=${state.id}`, { withCredentials: true })
+      axios.delete(`${BASE_URL}/LFPortal?id=${state.id}`, { withCredentials: true })
       .then(res => {
         alert("Deleted Successfully");
         navigate('/');

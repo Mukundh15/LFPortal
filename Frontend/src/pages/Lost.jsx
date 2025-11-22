@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cards from './Cards';
+import { BASE_URL } from "../config";
 
 function Found() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/LFPortal/cards")
+    axios.get(`${BASE_URL}/LFPortal/cards`)
       .then(res => setCards(res.data))
       .catch(err => console.error("Error fetching cards:", err));
   }, []);

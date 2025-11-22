@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useState ,useEffect} from "react";
 import { Alert } from "@mui/material";
 import { useLocation } from "react-router-dom";
+import { BASE_URL } from "../config";
 
 function Login(){
     const navigate=useNavigate();
@@ -25,7 +26,7 @@ function Login(){
             Password: e.target.password.value
         };
 
-        axios.post("http://localhost:8080/LFPortal/Login",data,{withCredentials: true})
+        axios.post(`${BASE_URL}/LFPortal/Login`,data,{withCredentials: true})
             .then(res=>{
                 console.log(res.data);
                 window.location.href='/';

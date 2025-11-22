@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import {Alert} from "@mui/material";
+import { BASE_URL } from "../config";
 function Signup(){
     const [error,seterror]=useState("");
     let HandleClick=(e)=>{
@@ -15,7 +16,7 @@ function Signup(){
             PhoneNumber: parseInt(e.target.phoneNumber.value, 10)
         };
 
-        axios.post("http://localhost:8080/LFPortal/Signup",data,{withCredentials: true})
+        axios.post(`${BASE_URL}/LFPortal/Signup`,data,{withCredentials: true})
             .then(res=>{
                 window.location.href='/';
             })

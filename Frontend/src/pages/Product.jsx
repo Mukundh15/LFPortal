@@ -3,25 +3,22 @@ import { TextField, Button, MenuItem, Select, InputLabel, FormControl} from "@mu
 import { useState ,useEffect} from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../config";
 function Product() {
     const [image,setImage]=useState(null);
-    const [itemType, setItemType] = useState("");
-
-    const navigate = useNavigate();
-
-    const [userData, setUserData] = useState({ name: '', email: '' });
-
+    const [itemType,setItemType]=useState("");
+    const navigate=useNavigate();
+    const [userData,setUserData]=useState({ name: '', email: '' });
     useEffect(() => {
-        axios.get("http://localhost:8080/LFPortal/Profile", { withCredentials: true })
+        axios.get(`${BASE_URL}/LFPortal/Profile`, { withCredentials: true })
             .then(res => {
                 setUserData({
                     userId:res.data.user.id,
-                    name: res.data.user.name,
-                    email: res.data.user.email
+                    name:res.data.user.name,
+                    email:res.data.user.email
                 });
             })
-            .catch(() =>{
+            .catch(()=>{
                 navigate('/Login', {
                     state: { error: 'Please login to access the Report a Product page.' }
                 });
@@ -39,7 +36,7 @@ function Product() {
         formData.append("item", itemType);
         formData.append("image",image);
 
-        axios.post("http://localhost:8080/LFPortal",formData,{withCredentials:true})
+        axios.post(`${BASE_URL}/LFPortal`,formData,{withCredentials:true})
           .then(res=>{
               console.log(res.data);
               navigate('/');

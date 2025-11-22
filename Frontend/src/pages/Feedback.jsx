@@ -5,6 +5,7 @@ import { useState,useEffect } from "react";
 import axios from 'axios';
 import { Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../config";
 function Feedback(){
     const [Ratingvalue, setValue] = useState(5);
     const [userData, setUserData] = useState({ name: '', email: '' });
@@ -12,7 +13,7 @@ function Feedback(){
     const [error, setError] = useState('');
     const navigate=useNavigate();
     useEffect(() => {
-        axios.get("http://localhost:8080/LFPortal/Profile", { withCredentials: true })
+        axios.get(`${BASE_URL}/LFPortal/Profile`, { withCredentials: true })
             .then(res => {
                 setUserData({
                     name: res.data.user.name,
@@ -36,7 +37,7 @@ function Feedback(){
             Description: e.target.description.value
         };
 
-        axios.post("http://localhost:8080/LFPortal/Feedback",data,{ withCredentials: true})
+        axios.post(`${BASE_URL}/LFPortal/Feedback`,data,{ withCredentials: true})
             .then(res=>{
                 setMessage("Feedback submitted successfully!");
                 setError('');
