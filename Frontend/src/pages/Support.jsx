@@ -56,13 +56,13 @@ function Support() {
             <h2 className="mb-4">SUPPORT</h2>
             <form onSubmit={HandleClick}>
                 <div className="mb-4">
-                    <TextField name="name" label="Enter Your Name" variant="outlined" sx={{ width: 500 }} value={userData.name}/>
+                    <TextField name="name" label="Enter Your Name" variant="outlined" sx={{ width: 350 }} value={userData.name}/>
                 </div>
                 <div className="mb-4">
-                    <TextField name="email" label="Enter Your Email" variant="outlined" sx={{ width: 500 }} value={userData.email} />
+                    <TextField name="email" label="Enter Your Email" variant="outlined" sx={{ width: 350 }} value={userData.email} />
                 </div>
                 <div className="mb-4">
-                    <TextField name="description" label="What's Your Problem" variant="outlined" multiline rows={4} sx={{ width: 500 }} />
+                    <TextField name="description" label="What's Your Problem" variant="outlined" multiline rows={4} sx={{ width: 350 }} />
                 </div>
                 <div className="text-center mt-4">
                     <Button type="submit" variant="contained" color="primary">

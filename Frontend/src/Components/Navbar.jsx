@@ -47,7 +47,7 @@ function Navbar() {
           <i className="fa-solid fa-bars"></i>
         </button>
         <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-          <form className="d-flex mx-auto my-2" role="search" style={{ width: "40%" }}>
+          <form className="d-flex mx-auto my-2 search" role="search">
             <input
               className="form-control me-2"
               type="search"
@@ -61,7 +61,7 @@ function Navbar() {
           <ul className="navbar-nav mb-2 mb-lg-0 d-flex align-items-center">
             {login?<li className="nav-item me-3"><Link className="nav-link active text-dark" onClick={Logout}>Logout</Link></li>:<li className="nav-item me-3"><Link className="nav-link active text-dark" to="/Login">Login</Link></li>}
             <li className="nav-item me-3">
-              <Link className="nav-link active text-dark" to="/Owner">About Owner</Link>
+              <Link className="nav-link active text-dark" to="/Owner">About</Link>
             </li>
             <li className="nav-item me-3">
               <Link className="nav-link active text-dark" to="/ReportProduct">Report</Link>

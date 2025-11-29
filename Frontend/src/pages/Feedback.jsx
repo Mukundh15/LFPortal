@@ -65,7 +65,7 @@ function Feedback(){
                 label="Enter Your Name"
                 variant="outlined"
                 value={userData.name}
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="mb-4">
@@ -75,7 +75,7 @@ function Feedback(){
                 label="Enter Your Email"
                 value={userData.email}
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="mb-4">
@@ -97,7 +97,7 @@ function Feedback(){
                 variant="outlined"
                 multiline
                 rows={4}
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="text-center mt-4">

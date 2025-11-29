@@ -51,16 +51,16 @@ function Login(){
                 name="email"
                 label="Enter Your Email"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
-            <div className="mb-2">
+            <div className="mb-2 login">
                 <TextField
                 id="password"
                 name="password"
                 label="Enter Your Password"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 autoComplete="new-password"
                 />
             </div>
@@ -77,7 +77,7 @@ function Login(){
                 </Button>
             </div>
         </form>
-        <br /> <br />
+        <br /> <br /><br />
     </div>
 }
 export default Login;

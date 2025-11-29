@@ -59,13 +59,13 @@ function CardsInfo() {
     <div className=" container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
       <h2 className="text-center">Details:</h2>
       <div className=" mb-3">
-        {error && <Alert severity="error" sx={{ width: 500 }}>{error}</Alert>}
+        {error && <Alert severity="error" sx={{ width: 350 }}>{error}</Alert>}
       </div>
-      <div className="row shadow-sm p-4 bg-white rounded" style={{ width: "100%", maxWidth: "900px" }}>
+      <div className="row shadow-sm p-4 bg-white rounded x" style={{ width: "100%", maxWidth: "900px" }}>
         <div className="col-md-6 mb-3 mb-md-0">
           {cardDetails.image && (
             <img src={cardDetails.image} className="card-img-top" alt="Product" style={{
-              width: '90%',
+              width: '80%',
               height: 'auto',
               maxHeight: '400px',
               objectFit: 'cover',

@@ -1,8 +1,8 @@
 function AboutOwner(){
     return <div className="container">
-        <div className="row mt-5 mb-5 p-2">
+        <div className="row mt-5 mb-5 p-2 x">
             <div className="col mb-5">
-                <img src="mukundh.jpg" style={{width:"60%",borderRadius:'50%',marginLeft:"6rem"}} />
+                <img src="mukundh.jpg" style={{width:"60%",borderRadius:'50%',marginLeft:"6rem"}} className="ownimg" />
             </div>
             <div className="col mt-5">
                 <p style={{ fontSize: "1.2rem", lineHeight: "1.6" }}>

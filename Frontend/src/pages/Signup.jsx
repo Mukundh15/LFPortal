@@ -40,7 +40,7 @@ function Signup(){
                 name="name"
                 label="Enter Your Name"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="mb-4">
@@ -49,7 +49,7 @@ function Signup(){
                 name="email"
                 label="Enter Your Email"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="mb-4">
@@ -58,7 +58,7 @@ function Signup(){
                 name="password"
                 label="Enter Your Password"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 autoComplete="new-password"
                 />
             </div>
@@ -68,7 +68,7 @@ function Signup(){
                 name="phoneNumber"
                 label="Enter Your Phone Number"
                 variant="outlined"
-                sx={{ width: 500 }}
+                sx={{ width: 350 }}
                 />
             </div>
             <div className="d-flex justify-content-center ">

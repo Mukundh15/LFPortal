@@ -1,0 +1,21 @@
+.search{
+    width: 30%;
+}
+
+@media(max-width: 700px){
+    .x{
+        display: block;
+        text-align: center;
+    }
+    .ownimg{
+        margin:auto;
+        display: block;
+    }
+    .search{
+        width:70%;
+    }
+    .card{
+        display: block;
+        margin: auto;
+    }
+}

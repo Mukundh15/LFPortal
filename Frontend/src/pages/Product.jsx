@@ -55,7 +55,7 @@ function Product() {
             label="Enter Your Name"
             variant="outlined"
             value={userData.name}
-            sx={{ width: 500 }}
+            sx={{ width: 350 }}
           />
         </div>
 
@@ -65,12 +65,12 @@ function Product() {
             name="productName"
             label="Product Name"
             variant="outlined"
-            sx={{ width: 500 }}
+            sx={{ width: 350 }}
           />
         </div>
 
         <div className="mb-4">
-          <FormControl sx={{ width: 500 }}>
+          <FormControl sx={{ width: 350 }}>
             <InputLabel id="item-label">Item Type</InputLabel>
             <Select
               labelId="item-label"
@@ -95,7 +95,7 @@ function Product() {
             variant="outlined"
             multiline
             rows={4}
-            sx={{ width: 500 }}
+            sx={{ width: 350 }}
           />
         </div>
 
@@ -104,7 +104,7 @@ function Product() {
                 type="file"
                 accept="image/*"
                 onChange={(e) => setImage(e.target.files[0])}
-                style={{ width: 500 }}
+                style={{ width: 350 }}
             />
         </div>
         <div className="text-center mt-4">
