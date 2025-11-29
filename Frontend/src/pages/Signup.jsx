@@ -30,7 +30,7 @@ function Signup(){
     }
     return <div className="d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
         <div className="mb-3">
-            {error && <Alert severity="error" sx={{ width: 500 }}>{error}</Alert>}
+            {error && <Alert severity="error" sx={{ width: 350 }}>{error}</Alert>}
         </div>
         <h2 className="mb-4">SIGN UP</h2>
         <form onSubmit={HandleClick} autoComplete="off">

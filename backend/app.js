@@ -54,15 +54,17 @@ app.use(cors({
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: MongoStore.create({
         mongoUrl: process.env.DBUrl,
     }),
     cookie: {
         maxAge: 3000 * 60 * 60 * 24,
-        secure: process.env.NODE_ENV === 'production',
+        // secure: process.env.NODE_ENV === 'production',
+        secure: true,
         httpOnly: true,
-        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
+        // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
+        sameSite: "none"
     }
 }));
 
