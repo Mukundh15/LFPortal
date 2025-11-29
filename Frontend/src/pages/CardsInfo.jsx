@@ -34,7 +34,7 @@ function CardsInfo() {
                 });
             });
         axios
-        .get(`http://localhost:8080/LFPortal/cardData?id=${state.id}`, { withCredentials: true })
+        .get(`${BASE_URL}/LFPortal/cardData?id=${state.id}`, { withCredentials: true })
         .then(res => {
             const data = res.data;
             setCardDetails({
